@@ -1,0 +1,650 @@
+::selection {
+    background-color: transparent;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
+#main {
+    position: relative;
+    background-color: black;
+}
+#song-play {
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+    position: fixed;
+    left: 23%;
+    bottom: 1%;
+    width: 77%;
+    height: 5vw;
+    background-color: black;
+    z-index: 10;
+    color: white;
+}
+#pstart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 35vw;
+    height: 4vw;
+    margin-left: 5vw;
+    padding-bottom: 1vw;
+}
+#myprogressbar {
+    -webkit-appearance: none;
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    width: 100%;
+    color: black;
+    background-color: rgb(36, 36, 36);
+    border-radius: 50px;
+    height: 0.4vw;
+}
+#myRange {
+    -webkit-appearance: none;
+    color: black;
+    background-color: rgb(36, 36, 36);
+    border-radius: 50px;
+    height: 0.4vw;
+}
+#icons1 {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#pstart i {
+    font-size: 1.5vw;
+}
+#pstart #play {
+    font-size: 3vw;
+}
+#pend {
+    background-color: black;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#computer {
+    font-size: 1.3vw;
+}
+#volume {
+    font-size: 1.7vw;
+}
+#full-src {
+    font-size: 1.3vw;
+}
+#page1 {
+    width: 100%;
+    min-height: 150vh;
+    display: flex;
+    overflow-x: hidden;
+}
+#page1 #part1 {
+    width: 23%;
+    min-height: 100vh;
+    background-color: black;
+    padding: 1vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#sticky {
+    position: sticky;
+    top: 2%;
+}
+#part1 #logo img{
+    width: 15vw;
+}
+#part1 #homes {
+    width: 100%;
+    height: 12vw;
+    margin-top: 2vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+#part1 #homes i {
+    font-size: 1.8vw;
+    z-index: 10;
+}
+#part1 #homes h1 {
+    font-size: 1.2vw;
+    z-index: 10;
+}
+#part1 #home {
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    position: relative;
+    padding: 0 1vw;
+}
+#part1 #search {
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    position: relative;
+    padding: 0 1vw;
+}
+#part1 #radio {
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    position: relative;
+    padding: 0 1vw;
+}
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(56, 55, 55, 0.555);
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: all ease 0.4s;
+}
+#library {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 1vw;
+    gap: 1.5vw;
+}
+#library p {
+    font-size: 1.1vw;
+    color: rgb(179, 179, 179);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 0.1vw;
+    cursor: pointer;
+}
+#library p:hover {
+    color: gray;
+}
+#home:hover #overlay {
+    height: 100%;
+}
+#search:hover #overlay {
+    height: 100%;
+}
+#radio:hover #overlay {
+    height: 100%;
+}
+#part1-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1vw;
+    gap: 0.8vw;
+}
+#part1-bottom p{
+    font-size: 1vw;
+    color: rgb(179, 179, 179);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 0.1vw;
+    cursor: pointer;
+}
+#part1-bottom p:hover {
+    color: gray;
+}
+#page1 #part2 {
+    width: 77%;
+    height: 100vh;
+    background-color: red;
+}
+#part2 #playlist {
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(#8F1017, #211212 ,#121212);
+}
+#part2 #nav {
+    width: 100%;
+    height: 4vw;
+    padding: 0 2vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav #arrowkeys i{
+    margin-right: 1vw;
+    background-color: rgba(255, 255, 255, 0.222);
+    font-size: 1.6vw;
+    padding: 0.7vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#nav #arrowkeys i:hover {
+    background-color: #6B0C11;
+}
+#user {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "gotham";
+    cursor: pointer;
+}
+#user1 {
+    font-size: 1.3vw;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 0.2vw;
+}
+#user2 {
+    font-size: 1.4vw;
+}
+#user i:hover {
+    scale: 1.1;
+}
+#part2 #image {
+    width: 14vw;
+    height: 14.6vw;
+    margin-left: 2vw;
+    overflow: hidden;
+    cursor: pointer;
+}
+#part2 #image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease 0.4s;
+}
+#part2 #image:hover img{
+    scale: 1.2;
+}
+#center {
+    display: flex;
+    align-items: flex-start;
+    gap: 1vw;
+}
+#part2 #title {
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 2vw  0vw;
+}
+#title p {
+    color: rgb(153, 151, 151);
+    font-size: 0.9vw;
+    margin-bottom: 1vw;
+}
+#title h5 {
+    margin-top: 1vw;
+    font-size: 1.1vw;
+    line-height: 2vw;
+    color: rgb(159, 159, 159);
+    font-weight: 100;
+}
+#part2 #songs {
+    width: 100%;
+    min-height: 100%;
+    background-color: #121212;
+}
+#elem1 {
+    width: 100%;
+    height: 5vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+#play {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#elem1 button {
+    width: 8vw;
+    height: 3vw;
+    border-radius: 50px;
+    border:  none;
+    color: white;
+    background-color: #1DB953;
+    cursor: pointer;
+}
+#elem1 button:hover {
+    background-color: #189945;
+}
+#elem1 button:active {
+    scale: 0.9;
+}
+#elem1 i {
+    font-size: 1.8vw;
+}
+#more:hover {
+    color: gray;
+}
+/* #heart:hover {
+    cursor: pointer;
+    color: lightcoral;
+} */
+#heart:active {
+    scale: 0.9;
+}
+#heart {
+    cursor: pointer;
+    color: white;
+}
+#followers p {
+    font-size: 0.9vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    color: rgb(158, 157, 157);
+}
+#container {
+    width: 100%;
+    height: 82%;
+    padding: 0 2%;
+    color: white;
+    cursor: pointer;
+}
+#container p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9vw;
+    letter-spacing: 0.1vw;
+}
+#title-2 {
+    width: 100%;
+    height: 4vw;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    display: flex;
+    position: relative;
+}
+.title {
+    position: absolute;
+    padding: 0 1vw;
+    top: 40%;
+    left: 0;
+    pointer-events: none;
+}
+.artist {
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    pointer-events: none;
+}
+.album {
+    position: absolute;
+    top: 40%;
+    left: 57%;
+    pointer-events: none;
+}
+.time {
+    position: absolute;
+    top: 40%;
+    left: 83%;
+    pointer-events: none;
+}
+#time i{
+    font-size: 1.6vw;
+    position: absolute;
+    top: 30%;
+    left: 83%;
+}
+.songs {
+    font-size: 1vw;
+    width: 100%;
+    height: 4vw;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    display: flex;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+    color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+#menu {
+    display: none;
+}
+
+
+
+
+
+@media (max-width:600px) {
+    #page1 #part1 {
+        display: none;
+    }
+    #page1 #part2 {
+        width: 100%;
+    }
+    #part2 #playlist {
+        width: 100%;
+        height: 40%;
+        position: relative;
+    }
+    #part2 #nav {
+        width: 100%;
+        height: 10vw;
+        padding: 0 2vw;
+    }
+    #nav #arrowkeys {
+        margin-left: 2vw;
+        margin-top: 50vw;
+    }
+    #nav #arrowkeys i{
+        font-size: 5.6vw;
+        padding: 1vw;
+    }
+    #menu {
+        display: block;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        color: gray;
+    }
+    #user {
+        width: 50vw;
+    }
+    #user1 {
+        font-size: 3vw;
+    }
+    #user2 {
+        font-size: 6vw;
+    }
+    #part2 #image {
+        width: 50vw;
+        height: 34.6vw;
+        position: absolute;
+        top: 15%;
+        left: 24%;
+    }
+    #part2 #title {
+        position: absolute;
+        top: 60%;
+        width: 80%;
+        left: 20%;
+    }
+    #title h1 {
+        font-size: 7vw;
+    }
+    #title p {
+        font-size: 2vw;
+    }
+    #title h5 {
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+
+
+    #elem1 {
+        width: 100%;
+        height: 20vw;
+        padding: 0 10vw;
+    }
+    #play {
+        display: flex;
+        align-items: center;
+        gap: 2vw;
+    }
+    #elem1 button {
+        width: 15vw;
+        height: 7vw;
+    }
+    #elem1 i {
+        font-size: 5vw;
+    }
+    #followers p {
+        font-size: 2vw;
+    }
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+    #container p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4vw;
+        letter-spacing: 0.3vw;
+    }
+    #title-2 {
+        width: 100%;
+        height: 10vw;
+        border-bottom: 1px solid rgb(65, 65, 65);
+        display: flex;
+        position: relative;
+    }
+    .title {
+        position: absolute;
+        font-size: 4vw;
+        padding: 0 1vw;
+        top: 40%;
+        left: 10%;
+    }
+    .artist {
+        position: absolute;
+        top: 40%;
+        left: 28%;
+        display: none;
+    }
+    .album {
+        position: absolute;
+        top: 40%;
+        left: 57%;
+        display: none;
+    }
+    .time {
+        position: absolute;
+        top: 40%;
+        left: 83%;
+    }
+    #time i{
+        font-size: 4vw;
+        position: absolute;
+        top: 35%;
+        left: 83%;
+    }
+    .songs {
+        font-size: 3vw;
+        width: 100%;
+        height: 15vw;
+        border-bottom: 1px solid rgb(65, 65, 65);
+        display: flex;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0.1vw;
+        font-weight: 500;
+        color: rgb(184, 184, 184);
+        cursor: pointer;
+    }
+
+
+
+    #song-play {
+        position: fixed;
+        left: 0%;
+        bottom: 1%;
+        width: 100%;
+        height: 15vw;
+        background-color: black;
+    }
+    #pstart {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+        background-color: black;
+        width: 100%;
+        height: 10vw;
+        margin-left: 20vw;
+        padding-bottom: 1vw;
+    }
+    #myprogressbar {
+        -webkit-appearance: none;
+        position: absolute;
+        display: none;
+        bottom: 2%;
+        left: 0;
+        width: 100%;
+        color: black;
+        background-color: rgb(36, 36, 36);
+        border-radius: 50px;
+        height: 0.4vw;
+    }
+    #icons {
+        display: flex;
+    }
+    #shuffle {
+        font-size: 4vw;
+    }
+    #play {
+        font-size: 9vw;
+    }
+    #forward {
+        font-size: 5vw;
+    }
+    #backward {
+        font-size: 5vw;
+    }
+    #arrow {
+        font-size: 5vw;
+    }
+    #pend {
+        display: none;
+        background-color: black;
+        width: 30vw;
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+    }
+    #computer {
+        font-size: 1.3vw;
+        display: none;
+    }
+    #volume {
+        font-size: 6vw;
+        display: none;
+    }
+    #full-src {
+        font-size: 1.3vw;
+        display: none;
+    }
+    #myRange {
+        display: none;
+    }
+
+
+
+
+
+
+}

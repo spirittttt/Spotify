@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for you</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/016/716/458/original/spotify-icon-free-png.png">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="song-play">
+            <div id="pstart">
+                <div id="icons1">
+                    <i id="shuffle" class="ri-shuffle-fill"></i>
+                    <i id="backward" class="ri-skip-back-fill"></i>
+                    <i id="play" class="ri-play-circle-line"></i>
+                    <i id="forward" class="ri-skip-forward-fill"></i>
+                    <i id="arrow" class="ri-arrow-left-right-line"></i>
+                </div>
+                <input type="range" name="rang" id="myprogressbar" min="0" max="100">
+           </div>
+        <div id="pend">
+            <i id="computer" class="ri-computer-line"></i>
+            <i id="volume" class="ri-volume-down-line"></i>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>
+            <i id="full-src" class="ri-fullscreen-line"></i>
+        </div>
+    </div>
+
+
+    <div id="main">
+
+        <div id="page1">
+
+            <div id="part1">
+                <div id="sticky">
+                    <div id="logo">
+                        <img src="http://static2.businessinsider.com/image/55801a50eab8ea1f1a3304f1-1200-364/spotify-logo.png" alt="">
+                    </div>
+    
+                    <div id="homes">
+                        <div id="home">
+                            <i class="ri-home-4-fill"></i> <h1>Home</h1>
+                            <div id="overlay"></div>
+                        </div>
+                        <div id="search">
+                            <i class="ri-search-line"></i> <h1>Search</h1>
+                            <div id="overlay"></div>
+                        </div>
+                        <div id="radio">
+                            <i class="ri-music-fill"></i> <h1>Radio</h1>
+                            <div id="overlay"></div>
+                        </div>
+                    </div>
+    
+                    <div id="library">
+                        <p>YOUR LIBRARY</p>
+                        <p>made for you</p>
+                        <p>recently played</p>
+                        <p>liked songs</p>
+                        <p>albums</p>
+                        <p>artists</p>
+                        <p>podcasts</p>
+                    </div>
+    
+                    <div id="part1-bottom">
+                        <p>PLAYLISTS</p>
+                        <p>Today's Top Hits</p>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div id="part2">
+
+               <div id="playlist">
+
+                    <div id="nav">
+                        <div id="arrowkeys">
+                            <i id="menu" class="ri-menu-3-line"></i>
+                            <i class="ri-arrow-left-s-line"></i>
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+                        <div id="user">
+                            <i id="user1" class="ri-user-line"></i>
+                            <p>Akashay Gupta</p>
+                            <i id="user2" class="ri-arrow-down-s-line"></i>
+                        </div>
+                    </div>
+
+                    <div id="center">
+
+                    <div id="image">
+                        <img src="https://wallpaperaccess.com/full/849779.jpg" alt="">
+                    </div>
+
+                    <div id="title">
+                        <p>PLAYLIST</p>
+                        <h1>lofi hip hop music - beats to relax/study to</h1>
+                        <h5>A daily selection of chill beats - perfect to help you relax & study 📚 <br> Created by Lofi Girl . 12 song, 28 min</h5>
+                    </div>
+
+                    </div>
+
+               </div>
+
+                <div id="songs">
+
+
+                    <div id="elem1">
+                       <div id="play">
+                        <button><p>PLAY</p></button>
+                        <i id="heart" class="ri-heart-fill"></i><!-- <i id="heart" class="ri-heart-line"></i> -->
+                        <i id="more" class="ri-more-fill"></i>
+                       </div>
+                       <div id="followers">
+                        <p>followers</p>
+                        <p>5,351,685</p>
+                       </div>
+                    </div>
+
+
+                    <div id="container">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
